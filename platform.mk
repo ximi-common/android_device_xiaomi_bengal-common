@@ -13,16 +13,16 @@
 # limitations under the License.
 
 # Platform Path
-PLATFORM_COMMON_PATH := device/motorola/sm4350-common
+PLATFORM_COMMON_PATH := device/motorola/sm4250-common
 
 # Platform
-HOLI := holi
-KERNEL_VERSION := 5.4
+BENGAL := bengal
+KERNEL_VERSION := 4.19
 PRODUCT_PLATFORM_MOT := true
-TARGET_BOARD_PLATFORM := $(HOLI)
+TARGET_BOARD_PLATFORM := $(BENGAL)
 
 # Kernel Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/sm4350-common-kernel/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/sm4250-common-kernel/kernel-headers
 
 # Rootdir Path
 MOTOROLA_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
@@ -56,7 +56,7 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 
 # A/B support
 AB_OTA_UPDATER := true
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # A/B OTA dexopt package
 PRODUCT_PACKAGES += \
@@ -75,17 +75,16 @@ PRODUCT_PACKAGES += \
     update_engine_client \
     update_engine_sideload \
     update_verifier \
-    bootctrl.sm4350-common \
-    bootctrl.sm4350-common.recovery
+    bootctrl.sm4250-common \
+    bootctrl.sm4250-common.recovery
 
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     product \
+    recovery \
     system \
-    system_ext \
     vendor \
-    vendor_boot \
     vbmeta \
     vbmeta_system
 
@@ -153,19 +152,19 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.holi
+    audio.primary.bengal
 
 # GFX
 PRODUCT_PACKAGES += \
-    copybit.holi \
-    gralloc.holi \
-    hwcomposer.holi \
+    copybit.bengal \
+    gralloc.bengal \
+    hwcomposer.bengal \
     libdisplayconfig.qti.vendor \
-    memtrack.holi
+    memtrack.bengal
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.holi
+    gps.bengal
 
 # Sensors init
 PRODUCT_PACKAGES += \
@@ -191,11 +190,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qcom.bluetooth.soc=hastings
+    persist.vendor.qcom.bluetooth.soc=cherokee
 
 # Legacy BT property (will be removed in S)
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=hastings
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Audio - Android System
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -280,4 +279,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-$(call inherit-product, vendor/motorola/sm4350-common/sm4350-common-vendor.mk)
+$(call inherit-product, vendor/motorola/sm4250-common/sm4250-common-vendor.mk)

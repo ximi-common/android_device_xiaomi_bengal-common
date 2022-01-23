@@ -1,4 +1,4 @@
-ifeq (holi,$(PRODUCT_PLATFORM))
+ifeq (bengal,$(PRODUCT_PLATFORM))
 
 LOCAL_PATH := $(call my-dir)
 
