@@ -30,7 +30,7 @@ TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.qcom
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
 # Boot Image Header
-BOARD_BOOT_HEADER_VERSION := 2
+BOARD_BOOT_HEADER_VERSION ?= 2
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 # Build a separate vendor.img
