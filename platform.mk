@@ -106,13 +106,9 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(MOTOROLA_ROOT)/vendor/etc/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
     $(MOTOROLA_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(MOTOROLA_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(MOTOROLA_ROOT)/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
-
-#PRODUCT_COPY_FILES += \
-#    $(MOTOROLA_ROOT)/vendor/etc/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -129,47 +125,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(MOTOROLA_ROOT)/vendor/usr/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
-
-# FPC Gestures
-PRODUCT_COPY_FILES += \
-    $(MOTOROLA_ROOT)/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
-    $(MOTOROLA_ROOT)/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
-
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
-
-# DPM config
-PRODUCT_COPY_FILES += \
-    $(MOTOROLA_ROOT)/vendor/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm/dpm.conf
 
 # Platform specific init
 PRODUCT_PACKAGES += \
     ueventd
 
-# Audio
-PRODUCT_PACKAGES += \
-    audio.primary.bengal
-
 # GFX
 PRODUCT_PACKAGES += \
-    copybit.bengal \
     gralloc.bengal \
-    hwcomposer.bengal \
     libdisplayconfig.qti.vendor \
     memtrack.bengal
-
-# GPS
-PRODUCT_PACKAGES += \
-    gps.bengal
-
-# Sensors init
-PRODUCT_PACKAGES += \
-    sscrpcd.rc \
-    sdsp-sensorspdr.rc
 
 # Sensors
 # hardware.ssc.so links against display mappers, of which
@@ -178,11 +146,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor
-
-# Sensors
-PRODUCT_PACKAGES += \
-    sns_reg_config \
-    hals.conf
 
 # Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -196,18 +159,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
-# Audio - Android System
-PRODUCT_PROPERTY_OVERRIDES += \
-    aaudio.mmap_policy=2 \
-    aaudio.mmap_exclusive_policy=2 \
-    aaudio.hw_burst_min_usec=2000 \
-    af.fast_track_multiplier=1
-
 # Audio - QCOM HAL
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.concurrent_capture.enable=true \
-    vendor.audio.feature.compress_in.enable=true \
-    vendor.audio.offload.buffer.size.kb=32
+    vendor.audio.feature.compress_in.enable=true
 
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -248,10 +203,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
-
-# External modem
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.mdm_helper.fail_action=cold_reset
 
 # Gatekeeper
 PRODUCT_PROPERTY_OVERRIDES += \
