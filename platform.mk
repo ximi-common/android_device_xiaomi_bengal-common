@@ -188,10 +188,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += device/qcom/common/vendor/init
 
-# vndservicemanager
-PRODUCT_PACKAGES += \
-    vndservicemanager
-
 # FPSensor Gestures
 PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
