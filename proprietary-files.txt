@@ -234,7 +234,6 @@ vendor/lib64/libqmi_encdec.so
 # Radio
 etc/permissions/privapp-permissions-qti.xml
 etc/sysconfig/qti_whitelist.xml
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/embms.xml
