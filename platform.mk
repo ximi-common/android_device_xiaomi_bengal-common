@@ -191,6 +191,11 @@ PRODUCT_SOONG_NAMESPACES += device/qcom/common/vendor/init
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# FPSensor Gestures
+PRODUCT_COPY_FILES += \
+    $(MOTOROLA_ROOT)/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
+    $(MOTOROLA_ROOT)/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
+
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
