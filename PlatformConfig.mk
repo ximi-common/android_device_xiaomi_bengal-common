@@ -63,7 +63,4 @@ TARGET_NEEDS_DTBOIMAGE ?= true
 # DTBO Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
-# Display
-TARGET_USES_GRALLOC4 := true
-
 include device/motorola/common/CommonConfig.mk
