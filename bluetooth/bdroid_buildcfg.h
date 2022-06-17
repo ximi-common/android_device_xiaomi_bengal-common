@@ -33,18 +33,18 @@ static inline const char* getBTDefaultName()
     property_get("ro.boot.device", device, "");
 
     if (!strcmp("guamna", device)) {
-        return "Moto G Play 2021";
+        return "moto g play (2021)";
     }
 
     if (!strcmp("borneo", device)) {
-        return "Moto G Power 2021";
+        return "moto g power (2021)";
     }
 
     if (!strcmp("cebu", device)) {
-        return "Moto G9 Power";
+        return "moto g9 power";
     }
 
-    return "Moto G";
+    return "moto g";
 }
 
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()

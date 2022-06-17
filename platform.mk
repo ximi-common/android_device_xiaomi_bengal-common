@@ -34,16 +34,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Camera
 TARGET_USES_64BIT_CAMERA := true
 
-# Keymaster
-TARGET_KEYMASTER_V4_1 := true
-
-# Vibrator
-TARGET_VIBRATOR_V1_2 := true
-
 # BT definitions for Qualcomm solution
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-TARGET_USE_QTI_BT_STACK := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
 
 # Dynamic Partitions: Enable DP
@@ -136,10 +127,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor
 
-# Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.camera=qcom
-
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcom.bluetooth.soc=cherokee
@@ -148,27 +135,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
-# Audio - QCOM HAL
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.feature.concurrent_capture.enable=true \
-    vendor.audio.feature.compress_in.enable=true
-
-# Audio - QCOM proprietary
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.adm.buffering.ms=2
-
-# USB controller setup
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=4e00000.dwc3 \
-    sys.usb.rndis.func.name=gsi
-
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_advanced_sf_phase_offset=1 \
-    debug.sf.high_fps_late_sf_phase_offset_ns=-5000000 \
-    debug.sf.high_fps_early_phase_offset_ns=-5000000 \
-    debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
-
 # Gatekeeper
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gatekeeper.disable_spu=true
@@ -176,15 +142,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Init
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/init/bengal/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh
-
-PRODUCT_PACKAGES += \
-    init.mmi.charge_only.rc \
-    init.mmi.chipset.rc \
-    init.mmi.overlay.rc \
-    init.oem.fingerprint.sh \
-    init.oem.fingerprint2.sh \
-    init.target.rc \
-    vendor_modprobe.sh
 
 PRODUCT_SOONG_NAMESPACES += device/qcom/common/vendor/init
 
@@ -195,5 +152,5 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, vendor/motorola/sm4250-common/sm4250-common-vendor.mk)
