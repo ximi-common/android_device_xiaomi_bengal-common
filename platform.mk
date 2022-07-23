@@ -154,6 +154,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 
+# Power
+PRODUCT_COPY_FILES += \
+    $(MOTOROLA_ROOT)/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+PRODUCT_USES_PIXEL_POWER_HAL := true
+
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
