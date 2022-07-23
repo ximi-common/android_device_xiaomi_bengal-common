@@ -377,6 +377,7 @@ vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 # Radio IMS
 etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
+system_ext/lib64/libimsmedia_jni.so
 -system_ext/priv-app/ims/ims.apk
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
