@@ -36,7 +36,6 @@
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
                 <item>Telephony Rx</item>
-                <item>FM tuner</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
@@ -79,14 +78,6 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_IN_AMBISONIC,AUDIO_CHANNEL_INDEX_MASK_3,AUDIO_CHANNEL_INDEX_MASK_4"/>
-                </mixPort>
-                <mixPort name="fm input" role="sink">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
-                    <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
                 <mixPort name="voice_rx" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -139,8 +130,6 @@
                 </devicePort>
                 <devicePort tagName="Telephony Rx" type="AUDIO_DEVICE_IN_TELEPHONY_RX" role="source">
                 </devicePort>
-                <devicePort tagName="FM tuner" type="AUDIO_DEVICE_IN_FM_TUNER" role="source">
-                </devicePort>
                 <devicePort tagName="USB Device In" type="AUDIO_DEVICE_IN_USB_DEVICE" role="source">
                 </devicePort>
                 <devicePort tagName="USB Headset In" type="AUDIO_DEVICE_IN_USB_HEADSET" role="source">
@@ -178,7 +167,6 @@
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
-                <route type="mix" sink="fm input" sources="FM tuner"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
             </routes>
         </module>
