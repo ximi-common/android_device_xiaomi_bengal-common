@@ -160,6 +160,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_USES_PIXEL_POWER_HAL := true
 
+# USB
+PRODUCT_USES_PIXEL_USB_HAL := true
+
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
