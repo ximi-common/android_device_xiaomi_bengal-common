@@ -24,6 +24,9 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 
 TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.qcom
 
+# Kernel
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
+
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
