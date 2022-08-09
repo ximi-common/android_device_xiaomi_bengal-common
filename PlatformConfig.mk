@@ -60,4 +60,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 # USB
 SOONG_CONFIG_MOTO_COMMON_USB_USB_CONTROLLER_NAME := 4e00000
 
+# SELinux
+BOARD_USE_ENFORCING_SELINUX := true
+
 include device/motorola/common/CommonConfig.mk
