@@ -11,7 +11,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := ramdisk-fstab.$(TARGET_DEVICE)
-LOCAL_SRC_FILES := vendor/etc/fstab.qcom
+LOCAL_SRC_FILES := fstab.qcom
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_STEM := fstab.qcom
 LOCAL_MODULE_CLASS := ETC
