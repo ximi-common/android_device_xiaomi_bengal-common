@@ -22,7 +22,9 @@ PRODUCT_PLATFORM_MOT := true
 TARGET_BOARD_PLATFORM := $(BENGAL)
 
 # Kernel Headers
+ifeq ($(TARGET_BUILDS_AOSP),true)
 PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/sm4250-common-kernel/kernel-headers
+endif
 
 # Rootdir Path
 MOTOROLA_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
