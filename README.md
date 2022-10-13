@@ -15,6 +15,9 @@ Android device configuration for the bengal platform (**SM4250/SM6115**).
 | Device | Codename |
 |-|:-:|
 | Moto G Play (2021) | guamna |
+| Moto G Power (2021) | borneo |
+| Moto G9 (India) | guamp |
+| Moto G9 Play | guamp |
+| Moto G9 Power| cebu |
 | Moto G(10) | capri |
 | Moto G(30) | caprip |
-| Moto G Power (2021) | borneo |
