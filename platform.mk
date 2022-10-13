@@ -22,9 +22,9 @@ PRODUCT_PLATFORM_MOT := true
 TARGET_BOARD_PLATFORM := $(BENGAL)
 
 # Kernel Headers
-ifeq ($(TARGET_BUILDS_AOSP),true)
+#ifeq ($(TARGET_BUILDS_AOSP),true)
 PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/sm4250-common-kernel/kernel-headers
-endif
+#endif
 
 # Rootdir Path
 MOTOROLA_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
@@ -95,7 +95,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(MOTOROLA_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(MOTOROLA_ROOT)/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
+    $(MOTOROLA_ROOT)/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+    $(MOTOROLA_ROOT)/vendor/firmware/aw882xx_pid_1852_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw882xx_pid_1852_acf.bin \
+    $(MOTOROLA_ROOT)/vendor/firmware/aw882xx_pid_2113_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw882xx_pid_2113_acf.bin
 
 # Media
 PRODUCT_COPY_FILES += \
