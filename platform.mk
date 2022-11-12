@@ -155,8 +155,7 @@ PRODUCT_COPY_FILES += \
     $(MOTOROLA_ROOT)/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
 
 # Fingerprint
-PRODUCT_COPY_FILES += \
-    $(MOTOROLA_ROOT)/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
+TARGET_USES_FPC_FINGERPRINT := true
 
 # Power
 PRODUCT_COPY_FILES += \
