@@ -166,6 +166,10 @@ PRODUCT_USES_PIXEL_POWER_HAL := true
 # USB
 PRODUCT_USES_PIXEL_USB_HAL := true
 
+# Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_network=10,10
+
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
