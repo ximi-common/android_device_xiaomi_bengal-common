@@ -65,22 +65,17 @@
       "ResetOnInit": true
     },
     {
-      "Name": "GPUMaxFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
-      "Values": [
-        "600000000",
-        "465000000",
-        "320000000"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "GPUMinFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/min_pwrlevel",
       "Values": [
-        "600000000",
-        "465000000",
-        "320000000"
+        "0",
+        "1",
+        "2"
+      ],
+      "Comments": [
+        "0 => 600000000",
+        "1 => 465000000",
+        "2 => 320000000"
       ],
       "ResetOnInit": true
     },
@@ -292,15 +287,9 @@
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "465000000"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "465000000"
+      "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
@@ -348,13 +337,7 @@
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "600000000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "600000000"
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
@@ -462,13 +445,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "600000000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "600000000"
+      "Value": "0"
     },
     {
       "PowerHint": "ML_ACC",
@@ -502,15 +479,9 @@
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "465000000"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "465000000"
+      "Value": "1"
     }
   ]
 }
