@@ -35,6 +35,9 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system
 
+# Device Characteristics
+DEVICE_CHARACTERISTICS += fm
+
 # Dynamic Partitions
 TARGET_USES_DYNAMIC_PARTITIONS := true
 
