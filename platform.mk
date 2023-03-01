@@ -36,9 +36,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Camera
 TARGET_USES_64BIT_CAMERA := true
 
-# BT definitions for Qualcomm solution
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
-
 # Dynamic Partitions: Enable DP
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
