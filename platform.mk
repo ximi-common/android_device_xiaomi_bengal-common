@@ -41,15 +41,6 @@ TARGET_USES_DYNAMIC_PARTITIONS := true
 # Fingerprint
 TARGET_USES_FPC_FINGERPRINT := true
 
-# FSTab
-ifneq (,$(filter $(AB_OTA_PARTITIONS), system_ext))
-  PRODUCT_COPY_FILES += \
-    $(PLATFORM_COMMON_PATH)/rootdir/fstab_system_ext.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-else
-  PRODUCT_COPY_FILES += \
-      $(PLATFORM_COMMON_PATH)/rootdir/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-endif
-
 # Gatekeeper
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gatekeeper.disable_spu=true
