@@ -21,3 +21,4 @@ Android device configuration for the bengal platform (**SM4250/SM6115/SM6225**).
 | Moto G9 Power| [cebu](../../../../moto-common/android_device_motorola_borneo) |
 | Moto G(10) | [capri](../../../../moto-common/android_device_motorola_caprip) |
 | Moto G(30) | [caprip](../../../../moto-common/android_device_motorola_caprip) |
+| Moto G(52) | [rhode](../../../../moto-common/android_device_motorola_rhode) |
