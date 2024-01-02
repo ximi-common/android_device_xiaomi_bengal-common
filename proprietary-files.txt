@@ -209,7 +209,6 @@ vendor/bin/hw/qcrild
 vendor/bin/ks
 vendor/bin/netmgrd
 vendor/bin/port-bridge
-vendor/bin/qmi_motext_hook
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-ns
 vendor/bin/qti
@@ -332,6 +331,9 @@ vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/7_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
+
+# Radio - from S2SNS32.34-72-31-1
+vendor/bin/qmi_motext_hook|1b23db5b183c17ac945dfb83998711bb4c5104b6
 
 # Radio IMS
 etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
