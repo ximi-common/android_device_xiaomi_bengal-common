@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=sm4250-common
-VENDOR=motorola
+DEVICE=sm6115-common
+VENDOR=xiaomi
 
 # Load extract utilities and do some sanity checks.
 MY_DIR="${BASH_SOURCE%/*}"

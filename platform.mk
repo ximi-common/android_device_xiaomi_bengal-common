@@ -13,13 +13,13 @@
 # limitations under the License.
 
 # Platform Path
-PLATFORM_COMMON_PATH := device/motorola/sm4250-common
+PLATFORM_COMMON_PATH := device/xiaomi/sm6115-common
 
 # Platform
 BENGAL := bengal
 TARGET_BOARD_PLATFORM := $(BENGAL)
 TARGET_KERNEL_VERSION := 4.19
-PRODUCT_PLATFORM_MOT := true
+PRODUCT_PLATFORM_XIMI := true
 PRODUCT_USES_QCOM_HARDWARE := true
 
 # A/B support
@@ -59,5 +59,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10,10
 
-$(call inherit-product, device/motorola/common/common.mk)
-$(call inherit-product, vendor/motorola/sm4250-common/sm4250-common-vendor.mk)
+$(call inherit-product, device/xiaomi/common/common.mk)
+$(call inherit-product, vendor/xiaomi/sm6115-common/sm6115-common-vendor.mk)

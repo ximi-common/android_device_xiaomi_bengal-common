@@ -39,4 +39,4 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USE_ENFORCING_SELINUX := true
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
 
-include device/motorola/common/CommonConfig.mk
+include device/xiaomi/common/CommonConfig.mk
